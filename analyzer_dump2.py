@@ -85,3 +85,4 @@ with open(image, 'rb') as f:
 
     print("\n=== HEX DUMP OF FILE DATA ===\n")
     hexdump(data[:file_size], cluster_lba * SECTOR_SIZE)
+
