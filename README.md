@@ -20,3 +20,4 @@
       echo -n "Hello world" | iconv -f UTF-8 -t ASCII > mnt/hello.txt (нужны права root)
       sudo umount mnt
 7. Снять дамп виртуального диска с помощью команды dd if=vdisk.img of=vdisk_dump.img bs=512
+8. Запустить скрипт командой python3 analizator2.py vdisk_dump.img 
