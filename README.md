@@ -14,4 +14,9 @@
    w # записать изменения
 4. Определить смещения раздела с помощью команды fdisk -l vdisk.img (например 2048)
 5. Форматировать FAT16 с помощью команды mkfs.vfat -F 16 --offset=2048 vdisk.img 
-   
+6. Смонтировать и записать текстовый файл hello.txt с содержимый "Hello world" в ASCII-кодировке с помощью команд:
+      mkdir mnt
+      sudo mount -o loop,offset=$((2048*512)) vdisk.img mnt
+      echo -n "Hello world" | iconv -f UTF-8 -t ASCII > mnt/hello.txt (нужны права root)
+      sudo umount mnt
+7. Снять дамп виртуального диска с помощью команды dd if=vdisk.img of=vdisk_dump.img bs=512
