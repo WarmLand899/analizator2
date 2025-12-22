@@ -1,6 +1,6 @@
 Руководство по использованию python-скрипта analyzer_dump для анализа дампа диска на Linux. Требования: Python 3.7+
-1. Склонировать репозиторий с помощью команды git clone https://github.com/WarmLand899/analizator2.git
-2. Запустить терминал
+1. Запустить терминал
+2. Склонировать репозиторий с помощью команды git clone https://github.com/WarmLand899/analizator2.git
 3. Создать виртуальный диск с помощью команды dd if=/dev/zero of=vdisk.img bs=1M count=32
 4. Создать разметку MBR с одним разделом с помощью данных команд:
    fdisk vdisk.img
